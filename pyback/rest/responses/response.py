@@ -8,5 +8,5 @@ T = TypeVar("T", bound=BaseResponse)
 
 class Response(BaseResponse, Generic[T]):
     data: T | List[T]
-    metadata: Metadata
+    metadata: Metadata = Metadata()
     pagination: Optional[Pagination]
