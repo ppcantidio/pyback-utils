@@ -11,7 +11,7 @@ from pyback.rest.responses.error import Error
 
 
 async def _is_not_a_custom_exc(exc: Type[BaseError] | Type[Exception]) -> bool:
-    if issubclass(exc, BaseError):
+    if issubclass(type(exc), BaseError):
         return False
     return True
 
@@ -36,4 +36,4 @@ async def base_error_exception_handler(
 
     content = error.model_dump(by_alias=True, exclude_unset=True, exclude_none=True)
 
-    return JSONResponse(status_code=error.status_code, content=content)
+    return JSONResponse(status_code=error.status, content=content)

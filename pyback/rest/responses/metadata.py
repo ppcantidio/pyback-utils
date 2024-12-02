@@ -1,6 +1,6 @@
 from typing import Any, Dict, Optional
 
-from opentelemetry.trace import trace
+from opentelemetry import trace
 
 from pyback.rest.responses.base_response import BaseResponse
 
@@ -13,5 +13,5 @@ def get_trace_id() -> str:
 
 class Metadata(BaseResponse):
     trace_id: str = get_trace_id()
-    service_name: str
-    details: Optional[Dict[str, Any]]
+    service_name: Optional[str] = None
+    details: Optional[Dict[str, Any]] = None
