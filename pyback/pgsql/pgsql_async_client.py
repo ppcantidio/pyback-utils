@@ -23,7 +23,7 @@ class PGSQLAsyncClient:
 
     @asynccontextmanager
     async def connect(self):
-        conn = await self._pool.connect()
+        conn = await self.pool.connect()
         try:
             yield conn
         finally:
