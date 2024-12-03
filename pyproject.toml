@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 
 [project]
 name = "pyback-utils"
-version = "0.1.0"
+version = "0.1.1"
 authors = [{ name = "Pedro Schauenberg F. Cantidio", email = "ppcantidio@gmail.com" }]
 description = "A set of utilities for Python back-end development."
 readme = "README.md"
