@@ -21,7 +21,10 @@ jobs:
         with:
           python-version: '3.11'
     
-      - name: Run tests
+      - name: Install Dependencies
         run: 
             pip install tox
+    
+      - name: Run Tests
+        run: 
             tox
