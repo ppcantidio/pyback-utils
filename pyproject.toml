@@ -19,6 +19,24 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
+dependencies = [
+    "sqlalchemy[asyncio] >= 2.0.36",
+    "asyncpg >= 0.30.0",
+    "starlette >= 0.41.3",
+    "pydantic >= 2.10.2",
+    "opentelemetry-api>=1.24.0",
+    "opentelemetry-proto>=1.24.0",
+    "opentelemetry-sdk>=1.24.0"
+]
+
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "pytest-mock"
+]
 
 [project.urls]
 homepage = "https://github.com/ppcantidio/pyback-utils.py"
@@ -26,3 +44,4 @@ homepage = "https://github.com/ppcantidio/pyback-utils.py"
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "function"
+
